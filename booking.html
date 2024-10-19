@@ -1,0 +1,156 @@
+<html><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>二手車預約服務 - 您的可靠選擇</title><style>
+body {
+  font-family: 'Microsoft JhengHei', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+header {
+  background-color: #1a5f7a;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+nav {
+  background-color: #2e8bc0;
+  padding: 0.5em;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 1em;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+main {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+.car-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.car-card:hover {
+  transform: translateY(-5px);
+}
+.car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.car-info {
+  padding: 1em;
+}
+.book-button {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  background-color: #1a5f7a;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.book-button:hover {
+  background-color: #2e8bc0;
+}
+footer {
+  background-color: #1a5f7a;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+</style></head><body>
+  <header>
+    <h1>二手車預約服務</h1>
+    <p>您的可靠選擇，為您找到理想的二手車</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="/">首頁</a></li>
+      <li><a href="/cars">車輛列表</a></li>
+      <li><a href="/about">關於我們</a></li>
+      <li><a href="/contact">聯絡我們</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>熱門二手車</h2>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="https://page-images.websim.ai/%E7%B4%85%E8%89%B2%E8%BD%8E%E8%BB%8A%EF%BC%8C2018%E5%B9%B4%E6%AC%BE%EF%BC%8C%E8%89%AF%E5%A5%BD%E7%8B%80%E6%85%8B_250x200x1iVKt9ZXi4Fxmhxxdx04381198e7be3.jpg" alt="紅色轎車，2018年款，良好狀態" class="car-image" width="250" height="200">
+        <div class="car-info">
+          <h3>Golf GTI</h3>
+          <p>年份：2018</p>
+          <p>里程：50,000 公里</p>
+          <p>價格：NT$ 580,000</p>
+          <a href="/book/1" class="book-button">預約看車</a>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="https://page-images.websim.ai/%E8%97%8D%E8%89%B2SUV%EF%BC%8C2019%E5%B9%B4%E6%AC%BE%EF%BC%8C%E5%AE%8C%E7%BE%8E%E7%8B%80%E6%85%8B_250x200x1iVKt9ZXi4Fxmhxxdxa403e8356e5c8.jpg" alt="藍色SUV，2019年款，完美狀態" class="car-image" width="250" height="200">
+        <div class="car-info">
+          <h3>Toyota </h3>
+          <p>年份：2019</p>
+          <p>里程：35,000 公里</p>
+          <p>價格：NT$ 750,000</p>
+          <a href="/book/2" class="book-button">預約看車</a>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="https://page-images.websim.ai/%E9%BB%91%E8%89%B2%E8%BD%8E%E8%B7%91%E8%BB%8A%EF%BC%8C2017%E5%B9%B4%E6%AC%BE%EF%BC%8C%E7%A8%80%E6%9C%89%E8%BB%8A%E5%9E%8B_250x200x1iVKt9ZXi4Fxmhxxdx951c83c68a7b9.jpg" alt="黑色轎跑車，2017年款，稀有車型" class="car-image" width="250" height="200">
+        <div class="car-info">
+          <h3> Lamborghini </h3>
+          <p>年份：2017</p>
+          <p>里程：65,000 公里</p>
+          <p>價格：NT$ 820,000</p>
+          <a href="/book/3" class="book-button">預約看車</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 二手車預約服務 版權所有</p>
+  </footer>
+<!-- 這是一個註解 -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const bookButtons = document.querySelectorAll('.book-button');
+  
+  bookButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const carName = this.closest('.car-info').querySelector('h3').textContent;
+      
+       alert(`測試中請耐心等待：${carName}。網站維護中...`);
+    // alert(`您已成功預約看車：${carName}。我們的客服人員將盡快與您聯絡，安排看車時間。`);
+    });
+  });
+});
+</script>
+</body></html>
