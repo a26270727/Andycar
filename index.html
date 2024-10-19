@@ -1,0 +1,144 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汽車維護中心 - 您的愛車守護者</title>
+<style>
+  body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  header {
+    background-color: #1a5f7a;
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  nav {
+    background-color: #2e8bc0;
+    padding: 0.5em;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 1em;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+  }
+  .service {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .cta {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 2em;
+  }
+  .cta a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    animation: rotate 10s linear infinite;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" fill="#2e8bc0"/>
+      <path d="M50 10 L90 50 L50 90 L10 50 Z" fill="#1a5f7a"/>
+      <circle cx="50" cy="50" r="10" fill="#ff6b6b"/>
+    </svg>
+    <h1>汽車維護中心</h1>
+    <p>您的愛車守護者</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="services">服務項目</a></li>
+      <li><a href="about">關於我們</a></li>
+      <li><a href="contact">聯絡我們</a></li>
+      <li><a href="booking">預約服務</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>我們的服務</h2>
+    <div class="service">
+      <h3>定期保養</h3>
+      <p>我們提供全面的定期保養服務，確保您的愛車始終保持最佳狀態。包括機油更換、濾清器檢查、輪胎檢查等。</p>
+    </div>
+    <div class="service">
+      <h3>故障診斷與修復</h3>
+      <p>使用先進的診斷設備，我們能夠快速準確地找出問題所在，並提供專業的修復服務。</p>
+    </div>
+    <div class="service">
+      <h3>輪胎服務</h3>
+      <p>提供輪胎更換、輪胎平衡、四輪定位等服務，確保您的行車安全。</p>
+    </div>
+    
+    <div class="cta">
+      <a href="booking">立即預約服務</a>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 汽車維護中心 版權所有</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctaButton = document.querySelector('.cta a');
+      ctaButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('感謝您的興趣！我們的預約系統正在維護中。請稍後再試或LINE 進行預約。');
+      });
+
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const page = this.getAttribute('href');
+          alert(`您正在前往 ${page} 頁面。此功能正在開發中，敬請期待！`);
+        });
+      });
+    });
+  </script>
+</body></html>
