@@ -125,21 +125,23 @@
   </footer>
 
   <script>
+    
     document.addEventListener('DOMContentLoaded', function() {
-      const ctaButton = document.querySelector('.cta a');
-      ctaButton.addEventListener('click', function(e) {
+    const ctaButton = document.querySelector('.cta a');
+    ctaButton.addEventListener('click', function(e) {
         e.preventDefault();
-        alert('感謝您的興趣！我們的預約系統正在維護中。請稍後再試，如有需求請 LINE 進行預約。');
-      });
-
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const page = this.getAttribute('href');
-          alert(`您正在前往 ${page} 頁面。此功能正在開發中，敬請期待！`);
-        });
-      });
+        alert('感謝您的興趣！我們的預約系統正在維護中。請稍後再試或LINE進行預約。');
     });
+
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const page = this.getAttribute('href');
+            // 使用 window.location.href 進行跳轉
+            window.location.href = page; 
+        });
+    });
+});
+
   </script>
 </body></html>
